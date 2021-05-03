@@ -43,5 +43,7 @@ namespace Web.Models.Entity
                 .Property(e => e.description)
                 .IsUnicode(false);
         }
+
+        public System.Data.Entity.DbSet<Web.Models.DTO.ProductDTO> ProductDTOes { get; set; }
     }
 }

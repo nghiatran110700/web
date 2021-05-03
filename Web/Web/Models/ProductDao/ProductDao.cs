@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Web.Models.Entity;
-using Web.Models.ProductDTO;
-using PagedList
+using Web.Models.DTO;
+using PagedList;
+
 namespace Web.Models.ProductDao
 {
     public class ProductDao
     {
-        ShopModel db = new ShopModel();
-       
+        ShopModel db ;
+       public ProductDao()
+        {
+            db = new ShopModel();
+        }
         public IQueryable<Product> products
         {
             get { return db.Products; }
@@ -65,13 +69,13 @@ namespace Web.Models.ProductDao
             var lst = db.Database.SqlQuery<ProductDTO>("SELECT " +
                 " pro.id, " +
                 " pro.name, " +
-                " pro.price, " +
+                " pro.pirce, " +
                 " pro.amount, " +
                 " pro.description, " +
                 " pro.photo, " +
-                " pro.idCategory, " +
+                " pro.idcategory, " +
                 " c.name " +
-                " FROM PRODUCT pro LEFT JOIN CATEGORY c on pro.IDCATEGORY = c.ID "
+                " FROM Product pro LEFT JOIN category c on pro.idcategory = c.idcategory"
                 ).ToPagedList<ProductDTO>(pageNum, pageSize);
             return lst;
         }

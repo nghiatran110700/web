@@ -74,3 +74,7 @@ E:\C#\Web\Web\obj\Debug\Web.csproj.CoreCompileInputs.cache
 E:\C#\Web\Web\obj\Debug\Web.csproj.CopyComplete
 E:\C#\Web\Web\obj\Debug\Web.dll
 E:\C#\Web\Web\obj\Debug\Web.pdb
+E:\C#\Web\Web\bin\PagedList.dll
+E:\C#\Web\Web\bin\PagedList.Mvc.dll
+E:\C#\Web\Web\bin\PagedList.xml
+E:\C#\Web\Web\bin\PagedList.Mvc.xml
