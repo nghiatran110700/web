@@ -78,3 +78,5 @@ E:\C#\Web\Web\bin\PagedList.dll
 E:\C#\Web\Web\bin\PagedList.Mvc.dll
 E:\C#\Web\Web\bin\PagedList.xml
 E:\C#\Web\Web\bin\PagedList.Mvc.xml
+E:\C#\Web\Web\obj\Debug\Web.Migrations.web.resources
+E:\C#\Web\Web\obj\Debug\Web.csproj.GenerateResource.cache

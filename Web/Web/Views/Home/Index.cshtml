@@ -1,9 +1,12 @@
-﻿@model PagedList.IPagedList<Web.Models.ProductDao.ProductDao>
-@using PagedList.Mvc
+﻿@model PagedList.IPagedList<Web.Models.Entity.Product>
+@using PagedList.Mvc;
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
+
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -11,22 +14,25 @@
 <table class="table">
     <tr>
         <th>
-            NAME
+            name
         </th>
         <th>
-            PRICE
+            pirce
         </th>
         <th>
-            AMOUNT
+            amount
         </th>
         <th>
-            DESCRIPTION
+            description
         </th>
         <th>
-            PHOTO
+            photo
         </th>
         <th>
-            IDCATEGORY
+            idcategory
+        </th>
+        <th>
+            cateName
         </th>
         <th></th>
     </tr>
@@ -53,7 +59,7 @@
                 @Html.DisplayFor(modelItem => item.idcategory)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cateName)
+                @Html.DisplayFor(modelItem => item.category)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.id }) |

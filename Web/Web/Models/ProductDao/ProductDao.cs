@@ -64,9 +64,9 @@ namespace Web.Models.ProductDao
         {
             return db.Products.Find(id);
         }
-        public IEnumerable<ProductDTO> lstJoin(int pageNum, int pageSize)
+        public IEnumerable<Product> lstJoin(int pageNum, int pageSize)
         {
-            var lst = db.Database.SqlQuery<ProductDTO>("SELECT " +
+            var lst = db.Database.SqlQuery<Product>("SELECT " +
                 " pro.id, " +
                 " pro.name, " +
                 " pro.pirce, " +
@@ -74,10 +74,11 @@ namespace Web.Models.ProductDao
                 " pro.description, " +
                 " pro.photo, " +
                 " pro.idcategory, " +
-                " c.name " +
+                " c.name" +
                 " FROM Product pro LEFT JOIN category c on pro.idcategory = c.idcategory"
-                ).ToPagedList<ProductDTO>(pageNum, pageSize);
+                ).ToPagedList<Product>(pageNum, pageSize);
             return lst;
         }
+
     }
 }

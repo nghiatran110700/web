@@ -1796,12 +1796,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105031423148_web.cs" />
+    <Compile Include="Migrations\202105031423148_web.Designer.cs">
+      <DependentUpon>202105031423148_web.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DTO\ProductDTO.cs" />
     <Compile Include="Models\Entity\Account.cs" />
     <Compile Include="Models\Entity\category.cs" />
     <Compile Include="Models\Entity\Product.cs" />
     <Compile Include="Models\Entity\ShopModel.cs" />
-    <Compile Include="Models\Entity\sysdiagram.cs" />
     <Compile Include="Models\ProductDao\ProductDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1984,6 +1988,10 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\Detail.cshtml" />
+    <Content Include="Views\Home\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1994,6 +2002,11 @@
   <ItemGroup>
     <Folder Include="Access\client\" />
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105031423148_web.resx">
+      <DependentUpon>202105031423148_web.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -15,7 +15,7 @@ namespace Web.Models.Entity
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<category> categories { get; set; }
         public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+      
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
