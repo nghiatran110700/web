@@ -26,13 +26,15 @@ namespace Web.Models.ProductDao
         }
         public int InsertProduct(string name, decimal price, int amount, string description, string photo, int idcategory)
         {
+
+            var cate = db.categories.Where(s => s.idcategory.Equals(idcategory)).SingleOrDefault();
             Product pro = new Product();
             pro.name = name;
             pro.pirce = price;
             pro.amount = amount;
             pro.description = description;
             pro.photo = photo;
-            pro.idcategory = idcategory;
+            pro.idcategory = cate.idcategory;
             db.Products.Add(pro);//luu tren RAM
             db.SaveChanges();//luu vao o dia
             return pro.id;

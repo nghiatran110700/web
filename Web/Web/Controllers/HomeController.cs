@@ -12,6 +12,7 @@ namespace Web.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        ShopModel db = new ShopModel();
         public ActionResult Index(int pageNum =1, int pageSize =2)
         {
             ProductDao dao = new ProductDao();
@@ -33,6 +34,9 @@ namespace Web.Controllers
             ProductDao dao = new ProductDao();
             Product pro = new Product();
             pro = dao.FindProductByID(id);
+            List<category> cate = db.categories.ToList();
+            SelectList catelist = new SelectList(cate, "idcategory", "name");
+            ViewBag.categorylist = catelist;
             return View(pro);
 
         }
